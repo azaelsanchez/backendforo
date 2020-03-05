@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/azaelsanchez/backendforo/issues"
   },
-  "homepage": "https://github.com/azaelsanchez/backendforo#readme"
+  "homepage": "https://github.com/azaelsanchez/backendforo#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
 }
