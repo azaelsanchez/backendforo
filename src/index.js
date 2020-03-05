@@ -13,7 +13,9 @@ app.use(express.json());
 
 
 //routes
-
+app.get('/', (req,res)=>{
+    res.send('Hello World');
+});
 //Inicia el server
 app.listen(app.get('port'),() =>{
     console.log(`Server runnig on ${app.get('port')}`);
