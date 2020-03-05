@@ -4,7 +4,8 @@ const morgan = require('morgan');
 
 
 //Configs
-app.set('port',process.env.PORT || 3000)
+app.set('port',process.env.PORT || 3000);
+app.set('json spaces', 2);
 
 //middlewares
 app.use(morgan('dev'));
@@ -13,9 +14,8 @@ app.use(express.json());
 
 
 //routes
-app.get('/', (req,res)=>{
-    res.send('Hello World');
-});
+app.use(require('./routes/index'));
+app.use(require('./routes/movies'));
 //Inicia el server
 app.listen(app.get('port'),() =>{
     console.log(`Server runnig on ${app.get('port')}`);
